@@ -31,7 +31,7 @@ try:
                     print("Too late - Not notifying.")
                 else:
                     print("BINGO! Notifying.")
-                    ctypes.windll.user32.MessageBoxW(0, "{}: Found an appointment at {}. Go to https://ttp.cbp.dhs.gov/ now!".format(city, appointments[0]['startTimestamp']), "Global Entry Appointment", 1)
+                    ctypes.windll.user32.MessageBoxW(0, "{}: Found an appointment at {}. Go to https://ttp.cbp.dhs.gov/ now!".format(city, appointments[0]['startTimestamp']), "Global Entry Appointment", 0x1000)
             else:
                 print("{}: No appointments available".format(city))
             time.sleep(1)
